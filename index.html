@@ -5,19 +5,19 @@
     </p>
     <img src="li.jpg">
     <script src="jquery-3.3.1.min.js"></script>
-    <input type="button" value="下一步">
+    <input type="button"  id="btn" value="下一步">
     <script>
         $(function(){
             $.get("./data.json",function(result){
-                $("myname").text(result.myname);
-                $("mynumber").text(result.mynumber);
+                $("#myname").text(result.myname);
+                $("#mynumber").text(result.mynumber);
             });
         })
 
         $("#btn").click(function(){
             $.get("./data1.json",function(){
-                $("myname").text(result.myname);
-                $("mynumber").text(result.mynumber);
+                $("#myname").text(result.myname);
+                $("#mynumber").text(result.mynumber);
             });
         })
     </script>
